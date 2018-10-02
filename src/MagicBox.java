@@ -18,7 +18,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 public class MagicBox extends JPanel implements Runnable, MouseListener {
-
+	MediaPalace med = new MediaPalace();
+	
 	/*
 	 * Work together as a TEAM of 2 or 3 to make this project. We are going to hide secrets within the magic box. 
 	 * When the user clicks on a secret place, stuff will happen.
@@ -54,9 +55,12 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 		frame.add(this);
 		frame.addMouseListener(this);
 		setPreferredSize(new Dimension(backgroundImage.getWidth(), backgroundImage.getHeight()));
-		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+		frame.setVisible(true);
+		frame.pack();
+		
+		
 	}
 
 	private void loadBackgroundImage() throws Exception {
@@ -76,31 +80,39 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("click");
+	med.speak("stop");
+	
+	med.speak("get some help");
+    //med.speak("the cow goes meow, the dog goes tweet, and the bird goes mooooooooo");
+		
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+	//	if (backgroundImage.getRGB(50>e.getY() &&  ) {
+			
+		//}
+		med.speak("why you bully me ");
+		//backgroundImage.getRGB(keyEvent.getX(), keyEvent.getY()) 
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+		med.speak("leave");
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+		med.speak("go away");
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+		med.speak("thank you, kind sin");
 	}
 
 }
