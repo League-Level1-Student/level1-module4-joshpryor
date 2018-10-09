@@ -121,7 +121,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 		pan.setVisible(true);
 		wind.pack();
 	}
-	
+	// it
 	
 	if (e.getX()>277 && e.getX()<386 && e.getY()>142 && e.getY()<212) {
 
